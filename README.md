@@ -1,6 +1,11 @@
-# Dotenv::Deployment
+# dotenv
 
-TODO: Write a gem description
+[dotenv](https://github.com/bkeepers/dotenv) is designed to load configuration variables into `ENV` in *development*. It does not concern itself with production environments because there are typically better ways to manage configuration in those environments—such as `/etc/environment` managed by [Puppet](https://github.com/puppetlabs/puppet) or [Chef](https://github.com/opscode/chef), `heroku config`, etc.
+
+However, some find dotenv to be a convenient way to configure applications in staging and production environments. This gem makes it easier to do that by adding support for:
+
+* [multiple environments](#multiple-environments)
+* [Capistrano](#capistrano)
 
 ## Installation
 
@@ -12,11 +17,13 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install dotenv-deployment
-
 ## Usage
+
+## Multiple Environments
+
+By default `.env` will be loaded when `dotenv-deployment` is required. It will not override existing environment variables.
+
+If you're using Rails or `ENV['RACK_ENV']` is set, an environment-specific file (like `.env.production`) will be loaded and override any existing variables.
 
 ## Capistrano
 
