@@ -23,7 +23,7 @@ And then execute:
 
 By default `.env` will be loaded when `dotenv-deployment` is required. It will not override existing environment variables.
 
-If you're using Rails or `ENV['RACK_ENV']` is set, an environment-specific file (like `.env.production`) will be loaded and override any existing variables.
+If you're using Rails or `ENV['RACK_ENV']` is set, an environment-specific file (like `.env.production`) will be loaded and override any existing variables. In a Rails project, `config/*.env` and `config/*.env.#{environment}` will also be loaded.
 
 ## Capistrano
 
