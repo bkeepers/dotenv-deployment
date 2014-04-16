@@ -9,4 +9,6 @@ Dotenv.load '.env', *configs
 # Override any existing variables if an environment-specific file exists
 environment = ENV['RACK_ENV'] || (defined?(Rails) && Rails.env)
 configs.map! {|e| e + ".#{environment}"} 
-Dotenv.overload ".env.#{environment}", *configs if environment
+
+Dotenv.overload ".env.#{environment}"
+Dotenv.overload *configs 
