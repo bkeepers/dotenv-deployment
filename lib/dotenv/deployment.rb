@@ -11,4 +11,4 @@ environment = ENV['RACK_ENV'] || (defined?(Rails) && Rails.env)
 configs.map! {|e| e + ".#{environment}"} 
 
 Dotenv.overload ".env.#{environment}"
-Dotenv.overload *configs 
+Dotenv.overload *Dir.glob("#{Rails.root}/config/**/*.env.#{environment}") if defined?(Rails)
