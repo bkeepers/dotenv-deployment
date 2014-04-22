@@ -1,4 +1,4 @@
-# dotenv
+# dotenv-deployment
 
 [dotenv](https://github.com/bkeepers/dotenv) is designed to load configuration variables into `ENV` in *development*. It does not concern itself with production environments because there are typically better ways to manage configuration in those environments—such as `/etc/environment` managed by [Puppet](https://github.com/puppetlabs/puppet) or [Chef](https://github.com/opscode/chef), `heroku config`, etc.
 
