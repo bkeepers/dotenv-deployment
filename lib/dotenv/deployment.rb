@@ -1,5 +1,8 @@
 require "dotenv"
 require "dotenv/deployment/version"
+require "dotenv/core-ext/dotenv/parser"
+require "dotenv/core-ext/dotenv/environment"
+require "dotenv/core-ext/dotenv"
 
 # Load defaults from .env or *.env in config
 Dotenv.load '.env'
