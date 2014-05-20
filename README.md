@@ -9,8 +9,9 @@ However, some find dotenv to be a convenient way to configure applications in st
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
+Add these lines to your application's Gemfile:
+    
+    gem 'dotenv'
     gem 'dotenv-deployment'
 
 And then execute:
