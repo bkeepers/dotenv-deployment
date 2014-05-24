@@ -15,7 +15,7 @@ Dotenv.load *Dir.glob("#{Rails.root}/config/**/*.env.yml")
 if environment = ENV['RACK_ENV'] || (defined?(Rails) && Rails.env)
   Dotenv.overload ".env.#{environment}"
   Dotenv.overload *Dir.glob("#{Rails.root}/config/**/*.env.#{environment}")
-  
+
   Dotenv.overload ".env.#{environment}.yml"
-  Dotenv.overload *Dir.glob("#{Rails.root{/config/**/*.env.#{environment}.yml")
+  Dotenv.overload *Dir.glob("#{Rails.root}/config/**/*.env.#{environment}.yml")
 end
