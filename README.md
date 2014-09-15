@@ -41,7 +41,7 @@ It will symlink the `.env` located in `/path/to/shared` in the new release.
 
 ### Capistrano 3
 
-Just add `.env` to the list of linked files, for example:
+This gem is not needed; Capistrano 3 has a baked-in mechanism for symlinking files. Just add `.env` to the list of linked files, for example:
 
 ```ruby
 set :linked_files, %w{config/database.yml .env}
