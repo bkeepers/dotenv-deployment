@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.3 - Oct 3, 2014
+
+* Declare dependency on dotenv ~>1.0
+
 ## 0.0.2 - Apr 22, 2014
 
 * Fix syntax errors after extracting from `dotenv`
