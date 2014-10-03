@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.3 - Oct 3, 2014
+## 0.2.0 - Oct 3, 2014
 
 * Declare dependency on dotenv ~>1.0
 
