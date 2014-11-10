@@ -1,7 +1,7 @@
 require "dotenv"
 require "dotenv/deployment/version"
 
-rails_root = File.absolute_path("./")
+rails_root = Rails.root || Dir.pwd
 
 # Load defaults from .env or *.env in config
 Dotenv.load('.env')
