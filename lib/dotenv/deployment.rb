@@ -11,7 +11,7 @@ Dotenv.load(*Dir.glob("#{rails_root}/config/**/*.env")) if defined?(Rails)
 if environment = ENV['RACK_ENV'] || (defined?(Rails) && Rails.env)
   Dotenv.overload(".env.#{environment}")
   if defined?(Rails)
-    config_env = Dir.glob("#{rails_root}/config/**/*.env.#{environment}")
+    config_env = Dir.glob("#{rails_root}/config/**/*.env.#{environment}", File::FNM_DOTMATCH)
     Dotenv.overload(*config_env) if config_env.any?
   end
 end
