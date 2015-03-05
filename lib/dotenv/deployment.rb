@@ -1,7 +1,9 @@
 require "dotenv"
 require "dotenv/deployment/version"
 
-rails_root = Rails.root || Dir.pwd
+warn "[DEPRECATION] the dotenv-deployment gem is deprecated. See https://github.com/bkeepers/dotenv-deployment#readme."
+
+rails_root = Rails.root || Dir.pwd if defined?(Rails)
 
 # Load defaults from .env or *.env in config
 Dotenv.load('.env')
