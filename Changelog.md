@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0 - Mar 5, 2014
+
+* This gem is now deprecated.
+
 ## 0.2.0 - Oct 3, 2014
 
 * Declare dependency on dotenv ~>1.0
